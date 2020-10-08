@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana", "Arial", sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    font-size: 14px;
+    color: hsl(185, 100%, 15%);
+  }
+  
+  div#header {
+    background: hsl(185, 100%, 15%) linear-gradient(to bottom, hsl(185, 100%, 10%), hsl(185, 100%, 15%), hsl(185, 100%, 15%), 
+    hsl(185, 100%, 20%));
+    border-bottom: 1px solid #585858;
+  }
+  h1 {
+    padding: 40px 50px 30px;
+    color:hsl(185, 50%, 55%);
+    text-align: center;
+    text-shadow: 1px 1px 3px #333;
+    font-size: 28px;
+    font-weight: normal;
+  }
+  
+  div#container {
+    position: relative;
+  }
+  
+  
+  ul#menu {
+    position: sticky;
+    float: left;
+    top: 0;
+    left: 0;
+    max-width: 120px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  ul#menu > li {
+    background: hsl(185, 100%, 15%) linear-gradient(to bottom, hsl(185, 100%, 15%), hsl(185, 90%, 25%));
+    color: hsl(185, 50%, 70%);
+    padding: 10px 15px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: hsl(185, 23%, 38%) hsl(185, 74%, 20%) hsl(185, 74%, 20%) hsl(185, 23%, 38%);
+    cursor: pointer;
+  }
+  ul#menu > li.inactive:hover {
+    background: hsl(185, 100%, 22%) linear-gradient(to bottom, hsl(58, 80%, 70%), hsl(58, 75%, 80%));
+    color: hsl(58, 100%, 20%);
+  }
+  ul#menu > li.active {
+    background: hsl(32, 100%, 12%) linear-gradient(to bottom, hsl(32, 100%, 12%), hsl(32, 90%, 17%));
+    color: hsl(32, 80%, 60%);
+  }
+  ul#menu > li.active:hover {
+    background: hsl(32, 100%, 15%) linear-gradient(to bottom, hsl(32, 100%, 15%), hsl(32, 90%, 20%));
+  }
+  
+  
+  div#conteudos {
+    margin-left: 120px;
+    padding: 20px 40px 20px 50px;
+    line-height: 150%;
+  }
+  div.conteudo {display: none;}
+  div.conteudo h2 {
+    margin: 0 0 20px;
+    padding: 20px 0 50px;
+    font-size: 24px;
+  }
+  div.conteudo p {margin: 20px 0;}
+  div.conteudo ul {margin-left: 50px;}
+  
+  /*-- formulário --*/
+  fieldset {
+    margin: 0 0 30px;
+    padding: 0 30px 20px;
+    border: 1px solid #9e9e9e;
+    border-radius: 10px;
+    background: hsl(0, 0%, 92%);
+  }
+  legend {
+    position: relative;
+    top: -10px;
+    padding: 5px 8px 8px;
+    background: hsl(0, 0%, 80%);
+    font-weight: bold;
+    border-radius: 7px;
+  }
+  label {
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+  }
+  span.tooltip {
+    display: block;
+    margin: 5px 0 0 310px;
+    font-size: 90%;
+    font-style: italic;
+    line-height: 100%;
+    color: hsl(185, 90%, 25%);
+  }
+  
+  input[type="text"] {
+    width: 150px;
+  }
+  input[type="number"] {
+    width: 50px;
+  }
+  

@@ -8,66 +8,11 @@
     <link rel="shortcut icon" href="https://www.flaticon.com/svg/static/icons/svg/261/261049.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./jquery-3.5.1.min.js"></script>
-    <script type="text/javascript">
 
-$(document).ready(() => {
-
-  // navegação pelos conteúdos disponíveis
-  let currentContent = null;
-  let showContent = (contentName) => {
-    switch (contentName) {
-      case "execucao":
-      case "memoria":
-      case "sobre":
-        break;
-      default:
-        contentName = "execucao";
-    }
-    $(currentContent).hide();
-    currentContent = $("#conteudo-" + contentName);
-    currentContent.show();
-    location.hash = contentName;
-
-    // definição do estilo dos itens do menu
-    $("#menu > li").each((index, item) => {
-      if (item.id == "menu-" + contentName) {
-        $(item).removeClass("inactive");
-        $(item).addClass("active");
-      } else {
-        $(item).removeClass("active");
-        $(item).addClass("inactive");
-      }
-    });
-  }
+<script src="./scripts.js" ></script>
+</head>
   
-  // atualização do conteúdo pelos itens do menu
-  $("#menu > li").each((index, item) => {
-    $(item).click(() => {
-      showContent(item.id.replace(/^menu-/, ""));
-    });
-  });
-
-  // atualização do conteúdo ao alterar manualmente o endereço ou clicar em "voltar"
-  $(window).on("hashchange", () => {
-    showContent(location.hash.substr(1));
-  })
-  
-  // exibição de uma página inicial
-  showContent(location.hash.substr(1));
-
-
-  $("#form-calculo").on("submit", () => {
-
-    // implementar cálculos
-
-    return false;
-  });
-});
-
-
-  </script>
-  </head>
-  <body>
+<body>
     <div id="header">
       <h1>Ferramenta online para aux&iacute;lio no estudo da disciplina Organiza&ccedil;&atilde;o de Computadores</h1>
     </div>

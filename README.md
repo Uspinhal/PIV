@@ -5,11 +5,18 @@
 ### Ferramenta online para auxílio no estudo da disciplina 
 Organização de Computadores
 Integrantes:
-Carlos Henrique Reche
+
+Carlos Henrique Reche<br>
 David Diniz de Souza
+
 Eric Marcelo de Souza
+
 Jamille Ariel Silva Altheman
+
 Oswaldo Vieira Neto
+
 Rodrigo Alessandro Barbosa
+
 Wagner Alves Lopes Gonçalves
+
 

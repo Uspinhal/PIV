@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ferramenta online para aux&iacute;lio no estudo da disciplina Organiza&ccedil;&atilde;o de Computadores</title>
+    <meta name="application-name" content="Ferramenta online para aux&iacute;lio no estudo da disciplina Organiza&ccedil;&atilde;o de Computadores" />
+    <meta name="description" content="Trabalho foi elaborado para a disciplina Projeto Integrador, do Curso de Engenharia da Computa&ccedil;&atilde;o da Universidade Virtual do Estado de S&atilde;o Paulo (UNIVESP)" />
+    <link rel="shortcut icon" href="https://www.flaticon.com/svg/static/icons/svg/261/261049.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+
+$(document).ready(() => {
+
+  // navegação pelos conteúdos disponíveis
+  let currentContent = null;
+  let showContent = (contentName) => {
+    switch (contentName) {
+      case "execucao":
+      case "memoria":
+      case "sobre":
+        break;
+      default:
+        contentName = "execucao";
+    }
+    $(currentContent).hide();
+    currentContent = $("#conteudo-" + contentName);
+    currentContent.show();
+    location.hash = contentName;
+
+    // definição do estilo dos itens do menu
+    $("#menu > li").each((index, item) => {
+      if (item.id == "menu-" + contentName) {
+        $(item).removeClass("inactive");
+        $(item).addClass("active");
+      } else {
+        $(item).removeClass("active");
+        $(item).addClass("inactive");
+      }
+    });
+  }
+  
+  // atualização do conteúdo pelos itens do menu
+  $("#menu > li").each((index, item) => {
+    $(item).click(() => {
+      showContent(item.id.replace(/^menu-/, ""));
+    });
+  });
+
+  // atualização do conteúdo ao alterar manualmente o endereço ou clicar em "voltar"
+  $(window).on("hashchange", () => {
+    showContent(location.hash.substr(1));
+  })
+  
+  // exibição de uma página inicial
+  showContent(location.hash.substr(1));
+
+
+  $("#form-calculo").on("submit", () => {
+
+    // implementar cálculos
+
+    return false;
+  });
+});
+
+
+  </script>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Ferramenta online para aux&iacute;lio no estudo da disciplina Organiza&ccedil;&atilde;o de Computadores</h1>
+    </div>
+    <div id="container">
+      <ul id="menu">
+        <li id="menu-execucao">Execu&ccedil;&atilde;o</li>
+        <li id="menu-memoria">Acesso &agrave; Mem&oacute;ria</li>
+        <li id="menu-sobre">Sobre</li>
+      </ul>
+      <div id="conteudos">
+
+        <div id="conteudo-execucao" class="conteudo">
+          <h2>C&aacute;lculo do Tempo de Execu&ccedil;&atilde;o</h2>
+          <form id="form-calculo" method="get" target="./projeto.htm">
+            <fieldset>
+              <legend>Dados da Unidade Central de Processamento (CPU)</legend>
+              <p>
+                <label for="campo-frequencia">Frequ&ecirc;ncia de Processador (<em>clock</em>):</label>
+                <input id="campo-frequencia" type="text" name="campo-frequencia" value="" />
+                <span class="tooltip">Determinada pelo <em>hardware</em> da CPU.</span>
+              </p>
+              <p>
+                <label for="campo-nucleos">Quantidade de N&uacute;cleos:</label>
+                <input id="campo-nucleos" type="number" name="campo-nucleos" value="1" min="1" max="50" />
+                <span class="tooltip"></span>
+              </p>
+              
+            </fieldset>
+            <fieldset>
+              <legend>Dados da Execução</legend>
+              <p>
+                <label for="campo-instrucoes">Quantidade de Instru&ccedil;&otilde;es:</label>
+                <input id="campo-instrucoes" type="text" name="campo-instrucoes" value="" />
+                <span class="tooltip">A quantidade (ou contagem) de instru&ccedil;&otilde;es &eacute; determinada pelo compilador, pelo algor&iacute;tmo, e depende da arquitetura do conjunto de instru&ccedil;&otilde;es.</span>
+              </p>
+              
+            </fieldset>
+            <input type="submit" value="calcular" />
+          </form>
+        </div>
+
+        <div id="conteudo-memoria" class="conteudo">
+          <h2>C&aacute;lculo do Tempo de Acesso &agrave; Mem&oacute;ria</h2>
+          <form id="form-calculo" method="get" target="./projeto.htm">
+          </form>
+        </div>
+
+        <div id="conteudo-sobre" class="conteudo">
+          <h2>Sobre</h2>
+          <p>
+            O presente trabalho foi elaborado para a disciplina Projeto Integrador, do Curso de Engenharia da Computa&ccedil;&atilde;o da Universidade Virtual do Estado de S&atilde;o Paulo (UNIVESP), com o tema norteador: &OpenCurlyDoubleQuote;Ferramentas computacionais para laborat&oacute;rios de cursos de Engenharia&CloseCurlyDoubleQuote;.
+          </p>
+          <p>
+            Integrantes:
+            <ul>
+              <li>Carlos Henrique Reche - RA: 1805078</li>
+              <li>David Diniz de Souza - RA: 1801230</li>
+              <li>Eric Marcelo de Souza - RA: 1805001</li>
+              <li>Jamille Ariel Silva Altheman - RA: 1811483</li>
+              <li>Oswaldo Vieira Neto - RA: 1805481</li>
+              <li>Rodrigo Alessandro Barbosa - RA: 1814377</li>
+              <li>Wagner Alves Lopes Gonçalves - RA: 1807238</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+  </body>
+</html>

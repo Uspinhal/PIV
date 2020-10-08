@@ -4,19 +4,13 @@
 
 ### Ferramenta online para auxílio no estudo da disciplina 
 Organização de Computadores
-Integrantes:
-
+Integrantes:<br>
 Carlos Henrique Reche<br>
-David Diniz de Souza
-
-Eric Marcelo de Souza
-
-Jamille Ariel Silva Altheman
-
-Oswaldo Vieira Neto
-
-Rodrigo Alessandro Barbosa
-
-Wagner Alves Lopes Gonçalves
+David Diniz de Souza<br>
+Eric Marcelo de Souza<br>
+Jamille Ariel Silva Altheman<br>
+Oswaldo Vieira Neto<br>
+Rodrigo Alessandro Barbosa<br>
+Wagner Alves Lopes Gonçalves<br>
 
 

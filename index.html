@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="https://www.flaticon.com/svg/static/icons/svg/261/261049.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./jquery-3.5.1.min.js"></script>
-
     <script src="./scripts.js" ></script>
+    <link rel="stylesheet" href="./style.css">
   </head>
   
 <body>
@@ -23,40 +23,40 @@
       <li id="menu-sobre">Sobre</li>
     </ul>
     
-  <div id="conteudos">
-    <div id="conteudo-execucao" class="conteudo">
-      <h2>C&aacute;lculo do Tempo de Execu&ccedil;&atilde;o</h2>
-      <form id="form-calculo" method="get" target="./index.html">
-        <fieldset>
-          <legend>Dados da Unidade Central de Processamento (CPU)</legend>
-          <p>
-            <label for="campo-frequencia">Frequ&ecirc;ncia de Processador (<em>clock</em>):</label>
-            <input id="campo-frequencia" type="text" name="campo-frequencia" value="" />
-            <span class="tooltip">Determinada pelo <em>hardware</em> da CPU.</span>
-          </p>
-          <p>
-            <label for="campo-nucleos">Quantidade de N&uacute;cleos:</label>
-            <input id="campo-nucleos" type="number" name="campo-nucleos" value="1" min="1" max="50" />
-            <span class="tooltip"></span>
-          </p>
-          
-        </fieldset>
-        <fieldset>
-          <legend>Dados da Execução</legend>
-          <p>
-            <label for="campo-instrucoes">Quantidade de Instru&ccedil;&otilde;es:</label>
-            <input id="campo-instrucoes" type="text" name="campo-instrucoes" value="" />
-            <span class="tooltip">A quantidade (ou contagem) de instru&ccedil;&otilde;es &eacute; determinada pelo compilador, pelo algor&iacute;tmo, e depende da arquitetura do conjunto de instru&ccedil;&otilde;es.</span>
-          </p>
-          
-        </fieldset>
-        <input type="submit" value="calcular" />
-      </form>
-    </div>
+    <div id="conteudos">
+      <div id="conteudo-execucao" class="conteudo">
+        <h2>C&aacute;lculo do Tempo de Execu&ccedil;&atilde;o</h2>
+        <form id="form-calculo" method="get" target="./scripts.js">
+          <fieldset>
+            <legend>Dados da Unidade Central de Processamento (CPU)</legend>
+            <p>
+              <label for="campo-frequencia">Frequ&ecirc;ncia de Processador (<em>clock</em>):</label>
+              <input id="campo-frequencia" type="text" name="campo-frequencia" value="" />
+              <span class="tooltip">Determinada pelo <em>hardware</em> da CPU.</span>
+            </p>
+            <p>
+              <label for="campo-nucleos">Quantidade de N&uacute;cleos:</label>
+              <input id="campo-nucleos" type="number" name="campo-nucleos" value="1" min="1" max="50" />
+              <span class="tooltip"></span>
+            </p>
+            
+          </fieldset>
+          <fieldset>
+            <legend>Dados da Execução</legend>
+            <p>
+              <label for="campo-instrucoes">Quantidade de Instru&ccedil;&otilde;es:</label>
+              <input id="campo-instrucoes" type="text" name="campo-instrucoes" value="" />
+              <span class="tooltip">A quantidade (ou contagem) de instru&ccedil;&otilde;es &eacute; determinada pelo compilador, pelo algor&iacute;tmo, e depende da arquitetura do conjunto de instru&ccedil;&otilde;es.</span>
+            </p>
+            
+          </fieldset>
+          <input type="submit" value="calcular" />
+        </form>
+      </div>
 
       <div id="conteudo-memoria" class="conteudo">
         <h2>C&aacute;lculo do Tempo de Acesso &agrave; Mem&oacute;ria</h2>
-        <form id="form-calculo" method="get" target="./index.html">
+        <form id="form-calculo" method="get" target="./scripts.js">
         </form>
       </div>
 
